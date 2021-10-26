@@ -1,0 +1,20 @@
+{
+  "Groups": {
+    "PersonList": {
+      "Person1": {
+        "name": "Stef",
+        "age": 18,
+        "bier": 5,
+        "wijn": 6,
+        "fris": 7
+      },
+      "Person2": {
+        "name": "Niels",
+        "age": 22,
+        "bier": 6,
+        "wijn": 7,
+        "fris": 8
+      }
+    }
+  }
+}

@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Turv">
         <activity
-            android:name=".GroupActivity"
-            android:exported="true" />
+            android:name=".Activities.GroupActivity"
+            android:exported="true"
+            android:parentActivityName=".Activities.MainActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

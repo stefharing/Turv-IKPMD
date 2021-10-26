@@ -1,4 +1,4 @@
-package nl.stefharing.turv;
+package nl.stefharing.turv.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,17 +7,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
-public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecyclerViewAdapter.ViewHolder> {
+import nl.stefharing.turv.R;
+
+public class PersonRecyclerViewAdapter extends RecyclerView.Adapter<PersonRecyclerViewAdapter.ViewHolder> {
 
     private List<String> mData;
     private LayoutInflater mInflater;
-    private ItemClickListener mClickListener;
+    private ItemClickListener2 mClickListener;
 
     // data is passed into the constructor
-    GroupRecyclerViewAdapter(Context context, List<String> data) {
+    public PersonRecyclerViewAdapter(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -25,7 +26,7 @@ public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecycler
     // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.groups_recyclerview_layout, parent, false);
+        View view = mInflater.inflate(R.layout.person_recyclerview_layout, parent, false);
         return new ViewHolder(view);
     }
 
@@ -49,7 +50,7 @@ public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecycler
 
         ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.tvAnimalName);
+            myTextView = itemView.findViewById(R.id.person_name);
             itemView.setOnClickListener(this);
         }
 
@@ -60,17 +61,17 @@ public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecycler
     }
 
     // convenience method for getting data at click position
-    String getItem(int id) {
+    public String getItem(int id) {
         return mData.get(id);
     }
 
     // allows clicks events to be caught
-    void setClickListener(ItemClickListener itemClickListener) {
-        this.mClickListener = itemClickListener;
+    public void setClickListener(ItemClickListener2 itemClickListener2) {
+        this.mClickListener = itemClickListener2;
     }
 
     // parent activity will implement this method to respond to click events
-    public interface ItemClickListener {
+    public interface ItemClickListener2 {
         void onItemClick(View view, int position);
     }
 }
