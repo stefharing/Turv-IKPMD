@@ -18,6 +18,7 @@ public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecycler
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
+
     // data is passed into the constructor
     public GroupRecyclerViewAdapter(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);

@@ -22,7 +22,7 @@
             android:background="@drawable/group_gradient">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/buttonDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_gravity="center"

@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Turv">
         <activity
+            android:name=".Activities.UserActivity"
+            android:exported="true"
+            android:parentActivityName=".Activities.GroupActivity"/>
+        <activity
             android:name=".Activities.GroupActivity"
             android:exported="true"
-            android:parentActivityName=".Activities.MainActivity"/>
+            android:parentActivityName=".Activities.MainActivity" />
         <activity
             android:name=".Activities.MainActivity"
             android:exported="true">

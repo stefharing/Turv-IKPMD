@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UserActivity">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#1D2853"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TableRow
+                android:id="@+id/bier_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/bier_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:text="Bier"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bier_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="120dp"
+                    android:text="0"
+                    android:textSize="17dp" />
+
+                <Button
+                    android:id="@+id/bier_delete_button"
+                    android:layout_width="30dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#61B6C1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="decreaseItem"
+                    android:clickable="true"
+                    android:text="-"
+                    android:textSize="25dp"
+                    app:cornerRadius="30dp" />
+
+                <Button
+                    android:id="@+id/bier_add_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#61B6C1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="increaseItem"
+                    android:clickable="true"
+                    android:text="+"
+                    android:textSize="25dp"
+                    app:cornerRadius="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fris_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fris_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fris"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fris_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="17dp"/>
+
+                <Button
+                    android:id="@+id/fris_delete_button"
+                    android:layout_width="30dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#61B6C1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="decreaseItem"
+                    android:clickable="true"
+                    android:text="-"
+                    android:textSize="25dp"
+                    app:cornerRadius="30dp" />
+
+                <Button
+                    android:id="@+id/fris_add_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#61B6C1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="increaseItem"
+                    android:clickable="true"
+                    android:text="+"
+                    android:textSize="25dp"
+                    app:cornerRadius="30dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/wijn_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/wijn_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wijn"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/wijn_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="17dp"/>
+
+                <Button
+                    android:id="@+id/wijn_delete_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#61B6C1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="decreaseItem"
+                    android:clickable="true"
+                    android:text="-"
+                    android:textSize="25dp"
+                    app:cornerRadius="30dp" />
+
+                <Button
+                    android:id="@+id/wijn_add_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#61B6C1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="increaseItem"
+                    android:clickable="true"
+                    android:text="+"
+                    android:textSize="25dp"
+                    app:cornerRadius="30dp" />
+            </TableRow>
+
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="40dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

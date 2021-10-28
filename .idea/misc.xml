@@ -7,10 +7,12 @@
         <entry key="app/src/main/res/drawable/group_gradient.xml" value="0.33026315789473687" />
         <entry key="app/src/main/res/layout/activity_group.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_user.xml" value="0.25" />
         <entry key="app/src/main/res/layout/adapter_view_layout.xml" value="0.25570175438596493" />
         <entry key="app/src/main/res/layout/groups_recyclerview_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/person_recyclerview_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/recycler_view_item.xml" value="0.256140350877193" />
+        <entry key="app/src/main/res/layout/text_input_password.xml" value="0.1" />
         <entry key="app/src/main/res/layout/top_app_bar.xml" value="0.21197916666666666" />
       </map>
     </option>
