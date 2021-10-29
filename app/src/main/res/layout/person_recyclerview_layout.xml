@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="@drawable/group_gradient">
+            android:background="@drawable/gradient_2">
 
             <ImageView
                 android:id="@+id/person_icon"
@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="0"
-                app:srcCompat="@android:drawable/ic_popup_reminder" />
+                app:srcCompat="@mipmap/user" />
 
             <TextView
                 android:id="@+id/person_name"

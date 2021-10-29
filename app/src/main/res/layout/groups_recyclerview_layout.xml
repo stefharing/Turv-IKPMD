@@ -19,16 +19,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="@drawable/group_gradient">
+            android:background="@drawable/gradient_1">
 
             <ImageView
                 android:id="@+id/buttonDelete"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:layout_weight="0"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@android:drawable/ic_dialog_info" />
+                android:layout_weight="0"
+                app:srcCompat="@mipmap/group" />
 
             <TextView
                 android:id="@+id/group_name"

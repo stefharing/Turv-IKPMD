@@ -13,64 +13,55 @@ import nl.stefharing.turv.R;
 
 public class PersonRecyclerViewAdapter extends RecyclerView.Adapter<PersonRecyclerViewAdapter.ViewHolder> {
 
-    private List<String> mData;
-    private LayoutInflater mInflater;
-    private ItemClickListener2 mClickListener;
+    private List<String> personAdapterList;
+    private LayoutInflater personInflater;
+    private ItemClickListener2 personClickListener;
 
-    // data is passed into the constructor
     public PersonRecyclerViewAdapter(Context context, List<String> data) {
-        this.mInflater = LayoutInflater.from(context);
-        this.mData = data;
+        this.personInflater = LayoutInflater.from(context);
+        this.personAdapterList = data;
     }
 
-    // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.person_recyclerview_layout, parent, false);
+        View view = personInflater.inflate(R.layout.person_recyclerview_layout, parent, false);
         return new ViewHolder(view);
     }
 
-    // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String animal = mData.get(position);
-        holder.myTextView.setText(animal);
+        String person = personAdapterList.get(position);
+        holder.personTextView.setText(person);
     }
 
-    // total number of rows
     @Override
     public int getItemCount() {
-        return mData.size();
+        return personAdapterList.size();
     }
 
-
-    // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView myTextView;
+        TextView personTextView;
 
         ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.person_name);
+            personTextView = itemView.findViewById(R.id.person_name);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+            if (personClickListener != null) personClickListener.onItemClick(view, getAdapterPosition());
         }
     }
 
-    // convenience method for getting data at click position
     public String getItem(int id) {
-        return mData.get(id);
+        return personAdapterList.get(id);
     }
 
-    // allows clicks events to be caught
     public void setClickListener(ItemClickListener2 itemClickListener2) {
-        this.mClickListener = itemClickListener2;
+        this.personClickListener = itemClickListener2;
     }
 
-    // parent activity will implement this method to respond to click events
     public interface ItemClickListener2 {
         void onItemClick(View view, int position);
     }

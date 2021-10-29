@@ -14,65 +14,56 @@ import nl.stefharing.turv.R;
 
 public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecyclerViewAdapter.ViewHolder> {
 
-    private List<String> mData;
-    private LayoutInflater mInflater;
-    private ItemClickListener mClickListener;
+    private List<String> groupAdapterList;
+    private LayoutInflater groupInflater;
+    private ItemClickListener groupClickListener;
 
-
-    // data is passed into the constructor
     public GroupRecyclerViewAdapter(Context context, List<String> data) {
-        this.mInflater = LayoutInflater.from(context);
-        this.mData = data;
+        this.groupInflater = LayoutInflater.from(context);
+        this.groupAdapterList = data;
     }
 
-    // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.groups_recyclerview_layout, parent, false);
+        View view = groupInflater.inflate(R.layout.groups_recyclerview_layout, parent, false);
         return new ViewHolder(view);
     }
 
-    // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String animal = mData.get(position);
-        holder.myTextView.setText(animal);
+        String groupName = groupAdapterList.get(position);
+        holder.textView.setText(groupName);
     }
 
-    // total number of rows
     @Override
     public int getItemCount() {
-        return mData.size();
+        return groupAdapterList.size();
     }
 
 
-    // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView myTextView;
+        TextView textView;
 
         ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.group_name);
+            textView = itemView.findViewById(R.id.group_name);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+            if (groupClickListener != null) groupClickListener.onItemClick(view, getAdapterPosition());
         }
     }
 
-    // convenience method for getting data at click position
     public String getItem(int id) {
-        return mData.get(id);
+        return groupAdapterList.get(id);
     }
 
-    // allows clicks events to be caught
     public void setClickListener(ItemClickListener itemClickListener) {
-        this.mClickListener = itemClickListener;
+        this.groupClickListener = itemClickListener;
     }
 
-    // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
