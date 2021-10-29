@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements GroupRecyclerView
 
     public void addGroupButton(View v) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Title");
+        builder.setTitle("Geef je groep een naam");
 
         EditText input = new EditText(this);
 

@@ -76,7 +76,7 @@ public class GroupActivity extends AppCompatActivity implements PersonRecyclerVi
 
     public void addPersonButton(View v) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Title");
+        builder.setTitle("Naam");
 
         // Set up the inputs
         final EditText nameInput = new EditText(this);
